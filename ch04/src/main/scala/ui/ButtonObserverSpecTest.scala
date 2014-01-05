@@ -1,3 +1,5 @@
+package ui
+
 import observer._
 import ui.{ButtonCountObserver, ObservableButton}
 
