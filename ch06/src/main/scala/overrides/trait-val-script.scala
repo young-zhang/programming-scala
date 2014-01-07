@@ -4,7 +4,7 @@ package overrides
 // DANGER! Silent failure to override a trait's "name" (V2.7.5 only).
 // Works as expected in V2.8.0.
 
-object TraitVal {
+object TraitValScript {
   def main(args: Array[String]): Unit = {
 
     trait T1 {

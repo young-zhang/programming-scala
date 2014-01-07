@@ -1,6 +1,6 @@
 package overrides
 
-object TraitAbsVal {
+object TraitAbsValScript {
   def main(args: Array[String]): Unit = {
 
     trait AbstractT1 {
