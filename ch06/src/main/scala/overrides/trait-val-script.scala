@@ -1,3 +1,5 @@
+package overrides
+
 // code-examples/AdvOOP/overrides/trait-val-script.scala
 // DANGER! Silent failure to override a trait's "name" (V2.7.5 only).
 // Works as expected in V2.8.0.

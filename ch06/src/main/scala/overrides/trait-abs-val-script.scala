@@ -1,3 +1,5 @@
+package overrides
+
 object TraitAbsVal {
   def main(args: Array[String]): Unit = {
 
