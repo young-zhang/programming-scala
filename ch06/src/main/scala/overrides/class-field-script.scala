@@ -1,6 +1,6 @@
 package overrides
 
-object ClassFieldTest {
+object ClassFieldScript {
   def main(args: Array[String]): Unit = {
     class C1 {
       val name = "C1"
