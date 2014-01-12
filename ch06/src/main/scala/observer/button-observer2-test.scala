@@ -1,0 +1,47 @@
+// code-examples/AdvOOP/observer/button-observer2-spec.scala
+
+package ui
+
+//import org.specs._
+
+import observer._
+
+object ButtonObserver2Spec {
+
+  def main(args: Array[String]): Unit = {
+
+    def SubjectForReceiveUpdateObservers {
+      val observableButton =
+        new Button("button name") with SubjectForReceiveUpdateObservers {
+          override def click() = {
+            super.click()
+            notifyObservers
+          }
+        }
+      val buttonObserver = new ButtonCountObserver
+      observableButton.addObserver(buttonObserver)
+      for (i <- 1 to 3) observableButton.click()
+
+      assert(buttonObserver.count == 3, "buttonObserver.count mustEqual 3")
+    }
+
+    def SubjectForFunctionalObservers {
+      val observableButton =
+        new Button("button name") with SubjectForFunctionalObservers {
+          override def click() = {
+            super.click()
+            notifyObservers
+          }
+        }
+      var count = 0
+      observableButton.addObserver((button) => count += 1)
+      for (i <- 1 to 3) observableButton.click()
+
+      assert(count == 3, "count mustEqual 3")
+    }
+
+    SubjectForReceiveUpdateObservers
+    SubjectForFunctionalObservers
+  }
+
+}
