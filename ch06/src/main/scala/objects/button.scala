@@ -18,5 +18,6 @@ class Button(val label: String) extends Widget with Clickable {
 }
 
 object Button {
-  def unapply(button: Button) = Some(button.label)
+  // takes a single Button arg and returns a Some wrapping the label value
+  def unapply(button: Button) : Some[String] = Some(button.label)
 }
