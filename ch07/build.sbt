@@ -1,4 +1,4 @@
-name := "Chapter 6"
+name := "Chapter 7"
 
 version := "1.0"
 
