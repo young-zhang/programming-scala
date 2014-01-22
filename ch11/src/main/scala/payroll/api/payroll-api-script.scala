@@ -20,7 +20,7 @@ object PayrollApiScript extends App {
 
     val check = Paycheck(biweeklyGross, biweeklyGross - deductions, deductions)
 
-    println("%s %s: %s\n".format(employee.name.first, employee.name.last, check))
+    println("%s %s: %s".format(employee.name.first, employee.name.last, check))
   }
 
 }
